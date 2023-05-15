@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  color: #ffaf4b;
+  font-family: 'Bungee Outline', cursive;  
+  font-size: 48px;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: glowing 2s ease-in-out infinite;
+  letter-spacing: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 6px #ffaf4b, 0 0 8px #ffaf4b, 0 0 10px #ffaf4b, 0 0 12px #ffaf4b, 0 0 14px #ffaf4b, 0 0 16px #ffaf4b;
+  }
+  50% {
+    text-shadow: 0 0 12px #ffaf4b, 0 0 14px #ffaf4b, 0 0 16px #ffaf4b, 0 0 18px #ffaf4b, 0 0 20px #ffaf4b, 0 0 22px #ffaf4b;
+  }
+  100% {
+    text-shadow: 0 0 6px #ffaf4b, 0 0 8px #ffaf4b, 0 0 10px #ffaf4b, 0 0 12px #ffaf4b, 0 0 14px #ffaf4b, 0 0 16px #ffaf4b;
+  }
+}
+
+#main {
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.movie {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.movie-info {
+  margin-top: 10px;
+}
+
+.movie-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.movie-info span {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.green {
+  background-color: green;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.red {
+  background-color: red;
+}
+
+.overview {
+  margin-top: 10px;
+}
+
+.overview h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+footer {
+  background-color: #130f40;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  height: 25px;
+}
+
+footer p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida  Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer a {
+  color: #bf1e1e;
+  text-decoration: none;
+  font-size: 15px;
+}
