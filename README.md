@@ -1,6 +1,6 @@
 # TMDB Movie App
 
-TMDB Movie App is a web application that allows users to explore popular and top-rated movies sourced from the TMDB (The Movie Database) API. With a sleek and intuitive interface, users can easily navigate through a wide selection of movies and access key information such as titles, posters, ratings, and overviews. [PREVIEW](https://tmdbmovies1.netlify.app/).
+TMDB Movie App is a web application that allows users to explore popular and top-rated movies sourced from the TMDB (The Movie Database) API. Users can conveniently switch between the two categories to explore different movie options. [PREVIEW](https://tmdbmovies1.netlify.app/).
 
 
 ## Prerequisites
