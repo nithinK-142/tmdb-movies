@@ -7,7 +7,7 @@ TMDB Movie App is a web application that allows users to explore popular and top
 
 - API key from TMDB by signing up on their website.
 - Clone the project from repo.
-- paste your api_key in script file.
+- paste your tmdb api_key in script file.
 
 
 ## Usage
