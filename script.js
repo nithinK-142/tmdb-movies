@@ -8,6 +8,7 @@ const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 $(document).ready(function() {
     const label = $("#label");
     const main = $("#main");
+    const footer = $("footer");
     let originalLabelText = label.text();
 
     label.click(function() {
@@ -25,6 +26,7 @@ $(document).ready(function() {
 
     function toggleMainContent() {
         main.empty();
+        footer.hide();
 
         if (label.text() === "top rated movies") {
             getMovies(APIURL_TOP_RATED);
@@ -37,6 +39,7 @@ $(document).ready(function() {
         const resp = await fetch(url);
         const respData = await resp.json();
         showMovies(respData.results);
+        footer.show();
     }
 
     function showMovies(movies) {
