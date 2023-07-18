@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     function toggleLabelText() {
         if (label.text() === originalLabelText) {
-            label.text("top rated movies");
+            label.text("top movies");
         } else {
             label.text(originalLabelText);
         }
@@ -28,7 +28,7 @@ $(document).ready(function() {
         main.empty();
         footer.hide();
 
-        if (label.text() === "top rated movies") {
+        if (label.text() === "top movies") {
             getMovies(APIURL_TOP_RATED);
         } else {
             getMovies(APIURL_POPULAR);

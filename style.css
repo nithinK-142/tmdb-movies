@@ -29,7 +29,33 @@ header {
   user-select: none;
 }
 
+/* label media queries */
+@media (max-width: 704px){
+  .label{
+    font-size: 36px;
+    letter-spacing: 14px;
+  }
+}
+@media (max-width: 640px){
+  .label{
+    font-size: 30px;
+    letter-spacing: 13px;
+  }
+}
+@media (max-width: 534px){
+  .label{
+    font-size: 24px;
+    letter-spacing: 12px;
+  }
+}
+@media (max-width: 440px){
+  .label{
+    font-size: 20px;
+    letter-spacing: 8px;
+  }
+}
 
+/* label animation */
 @keyframes glowing {
   0% {
     text-shadow: 0 0 6px #ffaf4b, 0 0 8px #ffaf4b, 0 0 10px #ffaf4b, 0 0 12px #ffaf4b, 0 0 14px #ffaf4b, 0 0 16px #ffaf4b;
@@ -108,32 +134,27 @@ header {
 footer {
   display: none;
   color: #fff;
-  font-size: 14px;
   text-align: center;
-  height: 25px;
+  /* height: 25px; */
 }
 
-footer p {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida  Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-footer a {
-  color: #bf1e1e;
-  text-decoration: none;
-  font-size: 15px;
+footer img {
+  height: 24px;
+	filter: brightness(0) invert(1);
 }
 
 
-/* Browser's scroll bat modifications */
+/* Browser's scroll bar modifications */
 ::-webkit-scrollbar {
   width: 10px; 
   background-color: #202324 !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(98, 94, 93);
+  background: rgb(57, 63, 64);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #beb73b;
+  background: #90A4AE;
 } 
