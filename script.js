@@ -9,7 +9,9 @@ $(document).ready(function() {
     const label = $("#label");
     const main = $("#main");
     const footer = $("footer");
+    const spinner = $('.loading-spinner');
     let originalLabelText = label.text();
+    let isLoading = true;
 
     label.click(function() {
         toggleLabelText();
@@ -24,14 +26,28 @@ $(document).ready(function() {
         }
     }
 
+    function toggleSpinner() {
+        if (isLoading) {
+            spinner.show();
+        } else {
+            spinner.hide();
+        }
+    }
+
     function toggleMainContent() {
         main.empty();
         footer.hide();
+        isLoading = true;
+        toggleSpinner();
 
         if (label.text() === "top movies") {
-            getMovies(APIURL_TOP_RATED);
+            setTimeout(function() {
+                getMovies(APIURL_TOP_RATED);
+            }, 500);
         } else {
-            getMovies(APIURL_POPULAR);
+            setTimeout(function() {
+                getMovies(APIURL_POPULAR);
+            }, 500);
         }
     }
 
@@ -40,6 +56,8 @@ $(document).ready(function() {
         const respData = await resp.json();
         showMovies(respData.results);
         footer.show();
+        isLoading = false;
+        toggleSpinner();
     }
 
     function showMovies(movies) {
@@ -79,5 +97,6 @@ $(document).ready(function() {
         }
     }
 
+    toggleSpinner();
     getMovies(APIURL_POPULAR);
 });
