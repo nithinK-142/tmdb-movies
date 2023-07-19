@@ -10,10 +10,11 @@ $(document).ready(function() {
     const main = $("#main");
     const footer = $("footer");
     const spinner = $('.loading-spinner');
+    const up = $('.arrowBox');
     let originalLabelText = label.text();
     let isLoading = true;
 
-    label.click(function() {
+    label.click(() => {
         toggleLabelText();
         toggleMainContent();
     });
@@ -31,12 +32,14 @@ $(document).ready(function() {
             spinner.show();
         } else {
             spinner.hide();
+            footer.show();
         }
     }
 
     function toggleMainContent() {
         main.empty();
         footer.hide();
+        up.hide();
         isLoading = true;
         toggleSpinner();
 
@@ -55,9 +58,10 @@ $(document).ready(function() {
         const resp = await fetch(url);
         const respData = await resp.json();
         showMovies(respData.results);
-        footer.show();
+        footer.css("position", "static");
         isLoading = false;
         toggleSpinner();
+        up.show();
     }
 
     function showMovies(movies) {
@@ -73,9 +77,7 @@ $(document).ready(function() {
                 />
                 <div class="movie-info">
                     <h3>${title}</h3>
-                    <span class="${getClassByRate(
-                        vote_average
-                    )}">${vote_average}</span>
+                    <span class="${getClassByRate(vote_average)}">${vote_average}</span>
                 </div>
                 <div class="overview">
                     <h3>Overview:</h3>
@@ -99,4 +101,4 @@ $(document).ready(function() {
 
     toggleSpinner();
     getMovies(APIURL_POPULAR);
-});
+})

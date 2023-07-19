@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TMDB</title>
+    <title>TMDB Flicks</title>
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="tmdb.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/tmdb.svg" />
 
 </head>
 
 <body>
 
     <header>
-        <label id="label" class="label">Popular Movies</label>   
+        <label id="label" class="label">Popular Movies</label>
     </header>
 
     <div class="loading-spinner">
@@ -34,14 +35,24 @@
             <div></div>
         </div>
     </div>
-    
+
     <main id="main"></main>
 
+    <div class="up">
+        <div class="arrowBox">
+            <a href="#label"><img id="upImage" src="./img/up-arrow.png" alt="up-arrow"></a>
+        </div>
+    </div>
+
     <footer>
-      <a href="https://github.com/nithinK-142/tmdb-movies" target="_blank" rel="noopener noreferrer"> <img id="git" src="git.png" alt="git"> </a>
+        <div class="footerBox">
+            <a href="https://github.com/nithinK-142/tmdb-movies" target="_blank" rel="noopener noreferrer"> <img id="git" src="./img/git.png" alt="git"> </a>
+            <p>Copyright &copy; TMDBflicks 2023 All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
